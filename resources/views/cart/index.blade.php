@@ -45,7 +45,7 @@ Cart | Babita
 
 
         <div class="col">
-            <button type="button" class="btn btn-success">Checkout</button>
+            <a href="{{route('checkout')}}" type="button" class="btn btn-success">Checkout</a>
         </div>
     </div>
     @else

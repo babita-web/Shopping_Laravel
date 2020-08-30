@@ -25,6 +25,10 @@ Route::get('/add-to-cart/{id}',[
     'uses' =>'CartController@addtocart',
     'as'=> 'cart.addtocart'
 ]);
+Route::get('/checkout',[
+    'uses' => 'CartController@checkout',
+    'as' => 'checkout'
+]);
 Route::get('logout', function() {
     Auth::logout();
     return redirect('/');

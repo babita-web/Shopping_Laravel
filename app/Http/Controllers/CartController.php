@@ -30,4 +30,16 @@ class CartController extends Controller
         $request->session()->put('cart',$cart);
         return redirect()->route('frontend.products');
     }
+    public function checkout()
+    {
+        if(!Session::has('cart')){
+            return view('cart.index');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        $total = $cart->totalPrice;
+
+        return view('cart.checkout',['products'=> $cart->items, 'totalPrice'=> $cart->totalPrice]);
+    }
+
 }

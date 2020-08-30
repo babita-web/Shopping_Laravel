@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e0c0fcf3-1b8a-4c0d-9709-f173c7d182e0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/cart/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/products.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +148,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../babitaWebshop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../babitaWebshop/checkout.php" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -188,7 +187,8 @@
       <workItem from="1597913734912" duration="21921000" />
       <workItem from="1598344474482" duration="12975000" />
       <workItem from="1598388819970" duration="3852000" />
-      <workItem from="1598433788585" duration="29291000" />
+      <workItem from="1598433788585" duration="30860000" />
+      <workItem from="1598737269596" duration="7632000" />
     </task>
     <servers />
   </component>
@@ -212,10 +212,10 @@
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state x="556" y="143" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1024@0.0.1920.1024" timestamp="1598434252070" />
-    <state x="631" y="143" key="FileChooserDialogImpl" timestamp="1598656066357">
+    <state x="631" y="143" key="FileChooserDialogImpl" timestamp="1598739113372">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
-    <state x="631" y="143" key="FileChooserDialogImpl/0.0.1920.1024@0.0.1920.1024" timestamp="1598656066357" />
+    <state x="631" y="143" key="FileChooserDialogImpl/0.0.1920.1024@0.0.1920.1024" timestamp="1598739113372" />
     <state x="1230" y="121" key="NewPhpClassDialog" timestamp="1598346164558">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
