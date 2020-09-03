@@ -50,7 +50,7 @@
                             </tbody>
 
                         </table>
-                        @endif
+
                         <div class="row">
                             <div class="col">
                                 <h3><strong>Total : {{ $totalPrice }}</strong></h3>
@@ -60,47 +60,33 @@
                         <!-- Set up a container element for the button -->
                         <div id="paypal-button-container"></div>
 
-                        <!-- Include the PayPal JavaScript SDK -->
-                        <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+                                <div id="paypal-button-container"></div>
+                                <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+                                <script>
+                                    paypal.Buttons({
+                                        style: {
+                                            shape: 'rect',
+                                            color: 'gold',
+                                            layout: 'vertical',
+                                            label: 'paypal',
 
-                        <script>
-                            // Render the PayPal button into #paypal-button-container
-                            paypal.Buttons({
-
-                                // Set up the transaction
-                                createOrder: function(data, actions) {
-                                    return actions.order.create({
-                                        purchase_units: [{
-                                            amount: {
-                                                value:<?php echo number_format($totalPrice,2);?>
-                                            }
-                                        }]
-                                    });
-                                },
-
-                                // Finalize the transaction
-                                onApprove: function(data, actions) {
-                                    return actions.order.capture().then(function(details) {
-                                        // Show a success message to the buyer
-                                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
-
-                                        // Call your server to save the transaction
-                                        return fetch('/paypal-transaction-complete', {
-                                            method: 'post',
-                                            headers: {
-                                                'content-type': 'application/json'
-                                            },
-                                            body: JSON.stringify({
-                                                orderID: data.orderID
-                                            })
-                                        });
-                                    });
-                                }
-
-
-                            }).render('#paypal-button-container');
-                        </script>
-
+                                        },
+                                        createOrder: function(data, actions) {
+                                            return actions.order.create({
+                                                purchase_units: [{
+                                                    amount: {
+                                                        value: '1'
+                                                    }
+                                                }]
+                                            });
+                                        },
+                                        onApprove: function(data, actions) {
+                                            return actions.order.capture().then(function(details) {
+                                                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                            });
+                                        }
+                                    }).render('#paypal-button-container');
+                                </script>
                     </ul>
                     <p>* 6 euro for shipping charge for a order under 100 €</p>
                     <hr>
@@ -216,7 +202,8 @@
                         </div>
                         <hr class="mb-4">
                         <a href="checkout_user.php" button class="btn btn-primary btn-lg btn-block" name="submitorder" type="submit">
-                            <i class="fa fa-credit-card"></i> </button></a>
+                            <i class="fa fa-credit-card"></i> </a>
+                    @endif
                     </form>
                 </div>
             </div>
@@ -225,4 +212,4 @@
 
 
 
-@endse
+@endsection
